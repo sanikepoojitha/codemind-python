@@ -1,8 +1,8 @@
-a=int(input())
-maxd=0
-while a>0:
-    rem=a%10
-    if rem>maxd:
-        maxd=rem
-    a//=10
-print(maxd)
+n=int(input())
+max=0
+while(n!=0):
+    r=n%10
+    if r>max:
+        max=r
+    n=n//10
+print(max)
