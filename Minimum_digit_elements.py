@@ -1,12 +1,6 @@
-a=int(input())
-b=input()
-arr=list(b.split())
-mi=100
-for i in arr:
-    if len(i)<mi:
-        mi=len(i)
-c=0
-for i in arr:
-    if len(i)==mi:
-        c+=1
-print(c)
+n=int(input())
+l=list(map(str,input().split()))
+a=[]
+for i in l:
+    a.append(len(i))
+print(a.count(min(a)))
