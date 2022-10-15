@@ -1,18 +1,15 @@
 n=int(input())
 l=list(map(int,input().split()))
-m=int(input())
-f=0
-mm=[]
+k=int(input())
+c=0
 for i in range(n):
-    c=0
+    h=0
     for j in range(n):
         if l[i]==l[j]:
-            c+=1
-    if c==m:
-        f+=1
-        mm.append(l[i])
+            h+=1
+    if h==k:
+        print(l[i],end=' ')
+        c+=1
         l[i]=0
-if f==0:
-    print('-1')
-else:
-    print(*mm)
+if c==0:
+    print("-1")
