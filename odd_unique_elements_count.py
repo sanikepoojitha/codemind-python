@@ -1,14 +1,9 @@
 n=int(input())
 l=list(map(int,input().split()))
-f=0
-for i in range(n):
-    c=0
-    for j in range(i,n):
-        if l[i]==l[j]:
-            c+=1
-    if c==1:
-        if l[i]%2==1:
-            f+=1
-        
-print(f)
-        
+l=set(l)
+c=0
+l=list(l)
+for i in l:
+    if i%2!=0:
+        c+=1
+print(c)
