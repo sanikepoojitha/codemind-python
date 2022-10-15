@@ -1,17 +1,18 @@
 n=int(input())
 l=list(map(int,input().split()))
+c=0
 s=0
-m=0
 for i in range(n):
-    c=0
+    h=0
     for j in range(n):
         if l[i]==l[j]:
-            c+=1
-    if c==l[i]:
-        s=s+l[i]
-        m+=1
+            h+=1
+    if h==l[i]:
+        s+=l[i]
+        c+=1
         l[i]=0
-if m==0:
-    print('-1')
+if c==0:
+    print("-1")
 else:
-    print("%.2f"%(s/m))
+    avg=s/c
+    print("%.2f"%avg)
