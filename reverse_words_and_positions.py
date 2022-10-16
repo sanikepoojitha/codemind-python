@@ -1,4 +1,5 @@
-a=input()
-l=len(a)
-for i in range(l-1,-1,-1):
-    print(a[i],end="")
+l=list(map(str,input().split()))
+ll=l[::-1]
+for i in range(len(ll)):
+    ll[i]=ll[i][::-1]
+print(*ll)
