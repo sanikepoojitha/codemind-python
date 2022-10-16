@@ -1,10 +1,4 @@
-def rev(s):
-    l=len(s)
-    s1=""
-    for i in range(l-1,-1,-1):
-        s1+=s[i]
-    return s1
-a=input()
-arr=list(a.split())
-for i in arr:
-    print(rev(i),end=" ")
+l=list(map(str,input().split()))
+for i in range(len(l)):
+    l[i]=l[i][::-1]
+print(*l)
