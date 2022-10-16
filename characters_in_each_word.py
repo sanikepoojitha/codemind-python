@@ -1,7 +1,5 @@
-a=input()
-arr=list(a.split())
-for i in arr:
-    c=0
-    for j in i:
-        c=len(i)
-    print(c,end=" ")
+l=list(map(str,input().split()))
+a=[]
+for i in range(len(l)):
+    a.append(len(l[i]))
+print(*a)
