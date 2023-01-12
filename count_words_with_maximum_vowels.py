@@ -1,20 +1,20 @@
-a=input()
-arr=list(a.split())
-vow=list("aeiouAEIOU")
-ma=0
-for i in arr:
+l=list(map(str,input().split()))
+arr=[]
+if len(l)==1:
     c=0
-    for j in i:
-        if j in vow:
-            c+=1
-    if ma<c:
-        ma=c
-wc=0
-for i in arr:
+    for char in l[0]:
+        if char in 'aeiouAEIOU':
+            c=1
+    print(c)
+else:
+    for ch in l:
+        c=0
+        for char in ch:
+            if char in 'aeiouAEIOU':
+                c+=1
+        arr.append(c)
     c=0
-    for j in i:
-        if j in vow:
+    for i in range(len(arr)):
+        if arr[i]==max(arr):
             c+=1
-    if c==ma:
-        wc+=1
-print(wc)
+    print(c)
