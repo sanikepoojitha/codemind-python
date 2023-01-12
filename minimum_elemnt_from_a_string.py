@@ -1,13 +1,11 @@
-n=list(map(str,input().split()))
-l=len(n)
-m=min(n[l-1])
-nn=m.lower()
-c=0
-for i in n[len(n)-1]:
-    if nn==i:
-        c=1
-        break
-if c==1:
-    print(nn)
-else:
-    print(m)
+s=input()
+s=s.split()
+y=0
+for i in range(len(s)-1,-1,-1):
+    x=s[i]
+    y=min(x)
+    if y.lower() in x:
+        print(y.lower())
+    else:
+        print(y)
+    break
